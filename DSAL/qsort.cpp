@@ -54,6 +54,5 @@ int main()
         sort(a,0,9);
         for(i=0;i<10;i++)
                 printf("%d",a[i]);
-        system("pause");
         return 0;
 }
