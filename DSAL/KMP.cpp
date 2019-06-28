@@ -59,10 +59,37 @@ int kmpMatch(const char *text, const char *pattern) {
         return -1;
 }
 
+int sundayMatch(const char *S, const char *P) {
+        int tlen = strlen(text);
+        int plen = strlen(pattern);
+        int s = 0;
+        int j = 0;
+        int shift[260];
+        for (int i = 0; i < 260; i++) {
+                shift = plen + 1;
+        }
+        for (int i = 0; i < plen; i++) {
+                shift[P[i]] = plen - i;
+        }
+
+        while (s <= tlen - plen) {
+                j = 0;
+                while (S[s+j]==P[j]){
+                        j++;
+                        if(j>plen){
+                                return s;
+                        }
+                }
+                s+=shift[T+plen];
+        }
+        return -1;
+};
+
 int main() {
         string text, pattern;
         cin >> text >> pattern;
         cout << violentMatch(text.c_str(), pattern.c_str()) << endl;
         cout << kmpMatch(text.c_str(), pattern.c_str()) << endl;
+        cout << sundayMatch(text.c_str(), pattern.c_str()) << endl;
         return 0;
 }

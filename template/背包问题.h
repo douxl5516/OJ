@@ -54,7 +54,7 @@ void ZeroOnePack(int c) {
     }
 }
 
-void multiplePack(int c, int m£© {
+void multiplePack(int c, int m) {
     if (m * c > sum / 2)
         CompletePack(c);
     else{

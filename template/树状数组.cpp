@@ -1,7 +1,3 @@
-/*
-    |16/11/06ztx|
-*/
-
 #include<iostream>
 #include<cstdio>
 #include<cstring>
